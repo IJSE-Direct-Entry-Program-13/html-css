@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Selectors</title>
+    <style>
+      b[title] {
+        font-size: 2rem;
+        color: red;
+      }
+
+      b[title="Ipsum"]{
+        color: blue;
+      }
+    </style>
+</head>
+<body>
+  <h1>Selectors</h1>
+  <p>
+    Lorem <b title="Hey! I am a tooltip">ipsum</b> dolor sit amet, consectetur adipisicing elit. Dolores eum fugiat ipsum nulla sint soluta temporibus voluptate voluptatibus? Aliquid eaque, similique. Earum in iure necessitatibus neque pariatur, quam reiciendis repudiandae!
+  </p>
+  <p>
+    Lorem <b>ipsum</b> dolor sit amet, consectetur adipisicing elit. Dolores eum fugiat ipsum nulla sint soluta temporibus voluptate voluptatibus? Aliquid eaque, similique. Earum in iure necessitatibus neque pariatur, quam reiciendis repudiandae!
+  </p>
+  <p>
+    Lorem <b title="Ipsum">ipsum</b> dolor sit amet, consectetur adipisicing elit. Dolores eum fugiat ipsum nulla sint soluta temporibus voluptate voluptatibus? Aliquid eaque, similique. Earum in iure necessitatibus neque pariatur, quam reiciendis repudiandae!
+  </p>
+  <button title="Click Me">OK</button>
+</body>
+</html>

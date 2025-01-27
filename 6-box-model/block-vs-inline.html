@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Block vs Inline</title>
+    <style>
+      #div-1 {
+        background-color: yellow;
+        font-size: 2rem;
+        width: 250px;
+        height: 250px;
+        background-clip: content-box;
+        padding: 20px;
+        border: 20px solid;
+        border-color: black red green blue;
+        margin: 50px;
+      }
+
+      span {
+        color: red;
+        font-weight: bold;
+        font-size: 1.2rem;
+        background-color: yellow;
+        width: 100px;
+        height: 100px;
+        padding: 30px;
+        border: 10px solid blue;
+        margin: 40px;
+        /*display: inline-block;*/
+      }
+
+      mark {
+        border: 5px solid black;
+        /*padding: 10px;*/
+        background-clip: content-box;
+        /*display: inline-block;*/
+      }
+    </style>
+</head>
+<body>
+<h1>Block vs Inline</h1>
+<div id="div-1">I am block</div>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+  Aperiam beatae blanditiis <span>maxime</span> possimus! Asperiores impedit quas, quod tenetur totam voluptate. Aperiam ea eaque eum labore laudantium minima, numquam similique vel.
+</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+  <mark>Animifjajj Word here fdas fjads jfadsj fdjs ;fjsdk fjasdkl fjklasdj fklasdjl fjadsk j;klfasdjklfjasdklfa jdfksjkdfjasdkfjjafkjdsl</mark> aspernatur consectetur ea eius in ipsum itaque iure labore maiores modi natus quas quia tenetur unde veniam, vitae voluptas? Minima, rerum.
+</p>
+</body>
+</html>

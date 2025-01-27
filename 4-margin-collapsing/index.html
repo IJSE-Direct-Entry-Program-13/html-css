@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Margin Collapsing</title>
+    <style>
+      div {
+        border: 1px solid black;
+        font-size: 1.5rem;
+        text-align: center;
+      }
+
+      #d1 {
+        margin-bottom: 50px;
+      }
+
+      #d3 {
+        margin-top: 50px;
+      }
+
+      #d2 {
+        margin-top: 75px;
+        margin-bottom: 50px;
+      }
+    </style>
+</head>
+<body>
+<h1>Margin Collapsing</h1>
+<div id="d1">
+  This is first div
+</div>
+<div id="d2">
+  This is second div
+</div>
+<div id="d3">
+  This is third div
+</div>
+</body>
+</html>

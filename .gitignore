@@ -1,0 +1,7 @@
+**/.idea
+**/*.iml
+**/target
+**/out
+**/.vscode
+**/dist
+**/node_modules

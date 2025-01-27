@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Combinators</title>
+    <style>
+        #s1 > span + span{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Combinators</h1>
+    <section id="s1">
+        <span>Span1</span>
+        <span>Span2</span>
+        <strong>Strong</strong>
+        <span>Span3</span>
+        <span>Span4</span>
+        <span>Span5</span>
+        <mark>Mark</mark>
+        <span>Span6</span>
+    </section>
+    <style>
+        #s2 > ul > li + li{
+            color: green;
+        }
+    </style>
+    <section id="s2">
+        <ul>
+            <li>First</li>
+            <li>Second</li>
+            <li>Third</li>
+            <li>Fourth</li>
+            <li>Fifth</li>
+        </ul>
+    </section>
+    <style>
+        #s3 > .b + .c{
+            color: red;
+        }
+
+        #s3 > .a + .a.b{
+            font-size: 1.5rem;
+        }
+    </style>
+    <section id="s3">
+        <div class="a b">First Div</div>
+        <div class="b c">Second Div</div>
+        <div class="a b c">Third Div</div>
+        <div class="a c">Fourth Div</div>
+        <div class="a b c">Fifth Div</div>
+    </section>
+</body>
+</html>

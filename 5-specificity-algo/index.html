@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Specificity Algorithm</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        h1#h-1[title].heading {
+            color: blue !important;
+        }
+
+        h2#h-2.sub-heading.sub-topic {  /* 1-2-1*/
+            color: red !important;
+            font-size: 2rem;
+            border: 1px solid black;
+        }
+
+        h2#h-2 {        /* 1-0-1*/
+            color: blue !important;
+        }
+    </style>
+</head>
+<body>
+<h1 id="h-1" class="heading" title="The specificity algorithm"
+    style="color:green !important;">Specificity Algorithm</h1>
+<h2 id="h-2" class="sub-heading sub-topic" title="Style me"
+    style="color: green !important;;">
+    Style me
+</h2>
+</body>
+</html>

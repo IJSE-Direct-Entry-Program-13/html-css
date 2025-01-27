@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Rule</title>
+    <style>
+        #li-1 {
+            color: red;
+        }
+
+        li:last-child {
+            font-size: 2rem;
+        }
+
+        li:last-child:hover {
+            color: red;
+        }
+
+        #li-2::after {
+            content: "After";
+            display: block;
+            font-size: 1.5rem;
+        }
+
+        #li-2::after:hover {
+           color: red;
+        }
+
+        li:nth-child(3):hover::before,
+        h1::before,
+        h3::before {
+            content: "Before";
+            display: block;
+            font-size: 2rem;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<h1>CSS Rule</h1>
+<h3>Click to go <a href="index.html">back</a></h3>
+<ul>
+    <li id="li-1">First</li>
+    <li id="li-2">Second</li>
+    <li>Third</li>
+    <li>Fourth</li>
+</ul>
+</body>
+</html>

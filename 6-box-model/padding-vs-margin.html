@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Padding vs Margin</title>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+      }
+
+      #div-1, #div-3 {
+        background-color: yellow;
+      }
+
+      #div-2, #div-4 {
+        background-color: red;
+      }
+
+      #div-1 {
+        margin-bottom: 50px;
+      }
+
+      #div-2 {
+        margin-top: 50px;
+      }
+
+      #div-3 {
+        background-clip: content-box;
+        padding-top: 50px;
+        padding-bottom: 50px;
+      }
+
+      #div-4 {
+        padding-top: 50px;
+        background-clip: content-box;
+      }
+    </style>
+</head>
+<body>
+  <h1>Padding vs Margin</h1>
+  <div id="div-1"></div>
+  <div id="div-2"></div>
+  <div id="div-3"></div>
+  <div id="div-4"></div>
+</body>
+</html>

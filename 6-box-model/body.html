@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Body Box</title>
+    <style>
+        #div-1 {
+            background-color: yellow;
+            padding: 20px;
+            border: 20px solid red;
+            /*background-clip: content-box;*/
+        }
+
+        #container {
+            background-color: lightseagreen;
+            border: 10px solid black;
+            padding: 10px;
+            background-clip: content-box;
+            width: 250px;
+            height:  250px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Body Box Confusion</h1>
+        <div id="div-1">
+            I am a block and I am awesome
+        </div>
+    </div>
+</body>
+</html>

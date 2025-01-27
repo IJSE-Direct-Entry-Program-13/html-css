@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Box Model</title>
+    <style>
+        #block {
+            background-color: yellow;
+            width: 150px;
+            height: 150px;
+            padding: 40px;
+            border: 40px solid;
+            border-color: red green blue black;
+            background-clip: content-box;
+            margin: 20px;
+        }
+
+        #arrow-1 {
+            border-top: 50px solid black;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            width: 0;
+        }
+
+        #arrow-2 {
+            border-bottom: 50px solid black;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            width: 0;
+        }
+
+        #arrow-3 {
+            border-top: 50px solid transparent;
+            border-bottom: 50px solid transparent;
+            border-right: 50px solid black;
+            width: 0;
+        }
+
+        #arrow-4 {
+            border-top: 50px solid transparent;
+            border-bottom: 50px solid transparent;
+            border-left: 50px solid black;
+            width: 0;
+        }
+    </style>
+</head>
+<body>
+<h1>Box Model</h1>
+<div id="block">I am a block</div>
+<hr>
+<h3>Arrows via Border Box</h3>
+<div id="arrow-1"></div>
+<div id="arrow-2"></div>
+<div id="arrow-3"></div>
+<div id="arrow-4"></div>
+</body>
+</html>
