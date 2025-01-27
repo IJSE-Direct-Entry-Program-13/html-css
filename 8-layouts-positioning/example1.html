@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-size: 1rem;
+      font-weight: normal;
+      color: black;
+      font-style: normal;
+      text-decoration: none;
+      cursor: default;
+      list-style-type: none;
+    }
+
+    body {
+      font-family: Ubuntu, sans-serif;
+    }
+
+    header {
+      /*background-color: yellow;*/
+      padding: 5px 10px;
+      height: 60px;
+      border-bottom: 1px solid lightgray;
+      text-align: right;
+      position: fixed;
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.68);
+      top: 0;
+
+      img {
+        /*border: 1px solid black;*/
+        vertical-align: middle;
+        position: absolute;
+        left: 10px;
+      }
+    }
+
+    main {
+      margin-top: 60px;
+      padding: 10px;
+      /*background-color: lightgreen;*/
+    }
+
+    header > nav {
+      display: inline-block;
+
+      & > menu > li {
+        display: inline-block;
+        padding: 10px;
+        /*border: 1px solid black;*/
+        cursor: pointer;
+        position: relative;
+        height: 50px;
+
+        &:hover {
+          background-color: lightgray;
+        }
+
+        &.drop-down {
+          padding-right: 20px;
+
+          & > menu {
+            position: absolute;
+            background-color: white;
+            border: 1px solid lightgray;
+            width: calc(100% + 70px);
+            top: 100%;
+            left: 0;
+            display: none;
+
+            li {
+              padding: 10px;
+              text-align: center;
+
+              &:hover {
+                background-color: lightgray;
+                cursor: pointer;
+              }
+            }
+          }
+
+          &:hover > menu {
+            display: block;
+          }
+
+          &:hover::after {
+            border-top-color: red;
+          }
+        }
+
+        &.drop-down::after {
+          content: "";
+          display: block;
+          position: absolute;
+          right: 5px;
+          top: 32%;
+          border-top: 5px solid black;
+          border-left: 5px solid transparent;
+          border-right: 5px solid transparent;
+        }
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://ijse.lk/images/logos/ijse@1x.png" alt="IJSE Logo">
+    <nav>
+      <menu>
+        <li>Home</li>
+        <li class="drop-down">Courses
+          <menu>
+            <li>DEP</li>
+            <li>CMJD</li>
+            <li>ABSD</li>
+          </menu>
+        </li>
+        <li>About Us</li>
+        <li>Contact Us</li>
+      </menu>
+    </nav>
+  </header>
+  <main>
+    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor iste nisi nulla numquam pariatur quo reiciendis
+      tempora vero! Cumque eligendi enim in iste magnam, minus modi non quod reiciendis temporibus.
+    </div>
+    <div>Aliquid blanditiis cupiditate delectus dicta dignissimos doloribus ducimus earum error et, fuga illum ipsam
+      ipsum, iusto labore maiores mollitia neque numquam, placeat praesentium qui recusandae reiciendis sed sunt
+      temporibus vitae.
+    </div>
+    <div>Aspernatur doloremque laborum omnis praesentium vero voluptas voluptatibus. A culpa eius hic magnam
+      perspiciatis repellendus. Doloribus dolorum esse harum rerum sequi ut? Corporis nostrum nulla, placeat recusandae
+      tempore veniam voluptates?
+    </div>
+    <div>Accusamus accusantium amet blanditiis commodi consectetur, ea error est et eum facilis fuga iusto molestias
+      nobis non obcaecati odio perspiciatis quis quos reiciendis saepe sint suscipit totam vel velit voluptas.
+    </div>
+    <div>Incidunt obcaecati officiis rerum sit voluptates. Adipisci at ducimus minus nam nesciunt odit, quibusdam soluta
+      tempora voluptatum. Cum eum exercitationem labore laboriosam quis tenetur voluptates. Cupiditate dolorem dolorum
+      explicabo quasi.
+    </div>
+    <div>Aut debitis et excepturi expedita harum impedit nobis reiciendis suscipit. Autem enim esse ipsa magnam magni
+      optio, praesentium repellendus soluta temporibus voluptate. Asperiores corporis fuga non omnis quod reprehenderit
+      velit.
+    </div>
+    <div>Accusamus accusantium architecto atque culpa deleniti dicta distinctio, dolorem exercitationem fugiat hic illo
+      iure molestias nisi optio provident quos ratione repellat repellendus soluta tempora ullam unde veniam. Hic,
+      laborum soluta.
+    </div>
+    <div>Aliquid dicta fuga magni minus mollitia nam nemo reiciendis. Atque beatae, consequuntur dolorum facilis fugiat
+      minus nesciunt placeat reprehenderit sunt unde. Animi corporis dicta dolorum ea provident repudiandae sed sunt!
+    </div>
+    <div>Beatae laborum obcaecati quisquam ullam vel. Accusantium adipisci alias, amet architecto commodi consectetur
+      doloremque eaque, eligendi illum impedit incidunt laborum odit perspiciatis praesentium quam quod, repudiandae
+      sunt voluptates! Placeat, quo.
+    </div>
+    <div>A atque autem deserunt dicta doloribus, eaque et fuga fugit itaque iure labore libero maxime mollitia porro
+      provident quaerat quam quasi ratione repellendus repudiandae soluta unde veniam veritatis voluptate voluptates.
+    </div>
+    <div>Error exercitationem quibusdam velit veniam voluptatem, voluptatum. Ab accusamus assumenda blanditiis dolore,
+      enim error fugit incidunt laboriosam laudantium minima necessitatibus obcaecati officia optio praesentium quam
+      quasi tempora veritatis. Fuga, sunt?
+    </div>
+    <div>Aliquam assumenda consequatur culpa cum delectus earum eius eum exercitationem facilis fuga iste iusto
+      laboriosam laborum laudantium modi neque numquam quisquam rem, repellendus saepe sapiente, tempora, tempore
+      temporibus velit voluptas.
+    </div>
+    <div>Accusamus alias aliquam aliquid animi consequatur debitis dicta doloribus ducimus eaque, facere facilis in
+      iusto laudantium officiis optio, perferendis repellendus repudiandae suscipit veniam vitae. Deserunt dignissimos
+      molestiae perspiciatis similique unde?
+    </div>
+    <div>Accusantium alias aspernatur assumenda autem culpa delectus deleniti dicta earum excepturi explicabo hic
+      inventore ipsum iusto maiores modi, molestiae nam, nemo non, odit officia provident quaerat quas recusandae rerum
+      sapiente.
+    </div>
+    <div>Culpa cum doloremque dolores ipsa libero quasi ratione sapiente, voluptatem voluptates? Ab accusantium adipisci
+      aut distinctio, doloremque eligendi est eum excepturi exercitationem explicabo officia, perferendis possimus sequi
+      similique ullam unde?
+    </div>
+    <div>A, adipisci alias aliquam, aliquid beatae cupiditate, earum fugit ipsa ipsam laudantium necessitatibus nihil
+      nostrum obcaecati officiis perferendis perspiciatis placeat porro quis quo ratione rem repellat reprehenderit
+      sapiente velit voluptatibus.
+    </div>
+    <div>A at, beatae blanditiis cum cupiditate dolor dolores eligendi enim eos esse explicabo fugit incidunt, ipsa
+      ipsum itaque laboriosam magni minus nihil nisi omnis placeat, quaerat quam suscipit tempore vel.
+    </div>
+    <div>Corporis dolor eius, enim, est fugiat inventore laborum nulla odit optio pariatur reiciendis rerum sunt tempore
+      totam veniam vero vitae voluptatem. Dolores id natus neque non odio sapiente sint voluptates?
+    </div>
+    <div>Accusantium aspernatur commodi consequuntur cum cumque cupiditate dignissimos, doloribus enim est et excepturi
+      impedit minima molestiae nesciunt nobis non omnis quis quo recusandae, repudiandae sunt tenetur totam unde vel
+      veniam.
+    </div>
+    <div>A architecto atque autem consequuntur corporis dolor doloremque dolorum excepturi facere harum illum ipsam
+      libero minima, molestias mollitia, nam natus non obcaecati pariatur possimus quam, quasi rerum vitae voluptate
+      voluptates?
+    </div>
+  </main>
+</body>
+</html>
