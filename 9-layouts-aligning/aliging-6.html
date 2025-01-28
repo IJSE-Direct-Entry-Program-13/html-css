@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Aligning 6</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        #container {
+            width: 400px;
+            height: 400px;
+            background-color: yellow;
+            margin: 10px auto;
+            position: relative;
+
+            #box {
+                position: absolute;
+                width: 80px;
+                height: 80px;
+                background-color: red;
+                animation: align 5s infinite;
+            }
+        }
+
+        @keyframes align {
+            from {
+                left: 0;
+                top: 0;
+            }
+
+            10%, 19% {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            20%, 29% {
+                left: 100%;
+                top: 0;
+                transform: translateX(-100%);
+            }
+
+            30%, 39% {
+                top: 50%;
+                transform: translate(-100%, -50%);
+            }
+
+            40%, 49% {
+                left: 100%;
+                top: 100%;
+                transform: translate(-100%, -100%);
+            }
+
+            50%, 59% {
+                left: 50%;
+                top: 100%;
+                transform: translate(-50%, -100%);
+            }
+
+            60%, 69% {
+                left: 0;
+                top: 100%;
+                transform: translate(0, -100%);
+            }
+
+            70%, 79% {
+                top: 50%;
+                left: 0;
+                transform: translate(0, -50%);
+            }
+
+            80%, to {
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    </style>
+</head>
+<body>
+<h1>Aligning 6</h1>
+<div id="container">
+    <div id="box"></div>
+</div>
+</body>
+</html>
