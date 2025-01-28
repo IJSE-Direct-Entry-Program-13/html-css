@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Aligning 2</title>
+    <style>
+        #container {
+            width: 400px;
+            height: 400px;
+            background-color: yellow;
+            /*text-align: center;*/
+
+            span {
+                position: relative;
+                background-color: red;
+                color: white;
+                display: inline-block;
+                left: 50%;
+                top: 100%;
+                transform: translateX(-50%) translateY(-100%);
+            }
+
+            div {
+                position: relative;
+                background-color: blue;
+                width: 100px;
+                height: 100px;
+                color: white;
+                left: 50%;
+                top: 50%;
+                transform: translateX(-50%) translateY(-50%);
+            }
+        }
+    </style>
+</head>
+<body>
+<h1>Aligning 2</h1>
+<div id="container">
+    <span>This is an inline element</span>
+    <div>This is block level element</div>
+</div>
+</body>
+</html>

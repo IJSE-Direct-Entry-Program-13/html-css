@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #heading {
+            background-color: yellow;
+            padding: 10px;
+            text-align: right;
+        }
+        #container {
+            width: 450px;
+            height: 450px;
+            background-color: yellow;
+            text-align: center;
+            display: table;
+
+            #inline-block {
+                width: 300px;
+                height: 100px;
+                background-color: red;
+                color: white;
+                text-align: right;
+                display: inline-block;
+            }
+            #block {
+                width: 100px;
+                height: 100px;
+                background-color: red;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 id="heading">
+        <mark>Layout</mark>
+        Aligning
+    </h1>
+    <div id="container">
+        <div id="wrapper">
+            I am just a text node
+            <span>I am an inline element</span>
+            <div id="inline-block">
+                I am inside the block though
+            </div><br>
+            <span>I am another inline element</span>
+            <div id="block"></div>
+        </div>
+    </div>
+</body>
+</html>

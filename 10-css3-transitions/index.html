@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3 Transitions</title>
+    <style>
+        h1 {
+            opacity: 0;
+            transition-property: opacity;
+            transition-duration: 4s;
+        }
+        h1:hover {
+            opacity: 1;
+        }
+
+        #box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border-radius: 0;
+            /*transition-property: border-radius, background-color;*/
+            /*transition-duration: 2s, 1s;*/
+            transition: border-radius 2s, background-color 1s;
+
+            &:hover {
+                border-radius: 50%;
+                background-color: green;
+            }
+        }
+
+        #image-container {
+            width: 300px;
+            height: 300px;
+            background-image: url('image/1.jpg');
+            background-size: cover;
+            background-position: center;
+            background-color: yellow;
+            margin-top: 10px;
+            position: relative;
+            overflow: hidden;
+
+            #overlay {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(255, 0, 0, 0.44);
+                top: 100%;
+                /*transition-property: top;*/
+                /*transition-duration: 500ms;*/
+                transition: top 500ms ease-in-out;
+                text-align: center;
+
+                div  {
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    margin-top: auto;
+                    margin-bottom: auto;
+                    height: fit-content;
+                    padding: 5px;
+                    color: white;
+                }
+
+                button {
+                    padding: 10px;
+                    background-color: lightblue;
+                    outline: none;
+                    border: 1px solid white;
+                    border-radius: 10px;
+                    margin-top: 10px;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: rgba(173, 216, 230, 0.66);
+                    }
+                }
+            }
+
+            &:hover > #overlay {
+                top: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+<h1>CSS 3 Transitions</h1>
+<div id="box"></div>
+<div id="image-container">
+    <div id="overlay">
+        <div>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet architecto consequuntur cupiditate dolorum et fugit hic ipsa libero molestiae nostrum odit officia optio pariatur, quasi quia ullam unde veniam voluptates?
+            <section>
+                <button>Read More</button>
+            </section>
+        </div>
+    </div>
+</div>
+</body>
+</html>

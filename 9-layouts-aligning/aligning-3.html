@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Aligning - 3</title>
+    <style>
+        #container {
+            width: 400px;
+            height: 400px;
+            background-color: yellow;
+            position: relative;
+            span {
+                position: absolute;
+                width: max-content;
+                right: 0;
+                left: 0;
+                bottom: 0;
+                margin-left: auto;
+                margin-right: auto;
+                background-color: lightgreen;
+            }
+            div {
+                position: absolute;
+                background-color: red;
+                width: 100px;
+                height: 100px;
+                left: 0;
+                right: 0;
+                margin-left: auto;
+                margin-right: auto;
+                top: 0;
+                bottom: 0;
+                margin-top: auto;
+                margin-bottom: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+<h1>Aligning 3</h1>
+<div id="container">
+    <span>I am an inline level element</span>
+    <div>I am a block level element</div>
+</div>
+</body>
+</html>
