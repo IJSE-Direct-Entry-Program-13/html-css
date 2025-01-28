@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Columns</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        #container-1 {
+            & > div {
+                width: calc(100% / 3);
+                height: 100px;
+                display: inline-block;
+
+                &:first-child {
+                    background-color: red;
+                }
+
+                &:nth-child(2) {
+                    background-color: yellow;
+                }
+
+                &:last-child {
+                    background-color: green;
+                }
+            }
+        }
+    </style>
+</head>
+<body>
+<h1>Columns with Floats</h1>
+<div id="container-1">
+    <div>Column 1</div><div>
+        Column 2
+    </div><div>
+        Column 3
+    </div>
+</div>
+
+<style>
+    #container-2 {
+        margin-top: 10px;
+        position: relative;
+        height: 100px;
+        div {
+            width: calc(100% / 3);
+            height: 100px;
+
+            &:first-child {
+                background-color: red;
+                position: absolute;
+                left: 0;
+            }
+            &:nth-child(2){
+                position: absolute;
+                background-color: yellow;
+                left: calc(100% / 3 * 2);
+            }
+            &:last-child {
+                position: absolute;
+                background-color: green;
+                left: calc(100% / 3 * 1);
+            }
+        }
+    }
+</style>
+
+<div id="container-2">
+    <div>Column 1</div>
+    <div>Column 2</div>
+    <div>Column 3</div>
+</div>
+
+<style>
+    #container-3 {
+        margin-top: 10px;
+
+        div {
+            width: calc(100% / 3);
+            height: 100px;
+            &:first-child {
+                background-color: red;
+                float: right;
+            }
+            &:nth-child(2){
+                background-color: green;
+                float: left;
+            }
+            &:last-child {
+                background-color: yellow;
+                float: left;
+            }
+        }
+    }
+</style>
+
+<div id="container-3">
+    <div>Column 1</div>
+    <div>Column 2</div>
+    <div>Column 3</div>
+</div>
+</body>
+</html>
