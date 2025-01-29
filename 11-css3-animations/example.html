@@ -2,9 +2,140 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Example</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            overflow: hidden;
+        }
+
+        #walking-man {
+            position: absolute;
+            width: 300px;
+            top: 65%;
+            animation: walking-man 15s linear infinite;
+        }
+
+        @keyframes walking-man {
+            from {
+                left: 0;
+                transform: rotateY(0deg);
+            }
+
+            49% {
+                left: calc(100% - 300px);
+                transform: rotateY(0deg);
+            }
+            50% {
+                transform: rotateY(180deg);
+            }
+            100% {
+                left: 0;
+                transform: rotateY(180deg);
+            }
+        }
+
+        @keyframes cloud {
+            from {
+                margin-left: -500px;
+            }
+            to{
+                margin-left: 100%;
+            }
+        }
+
+        .cloud {
+            position: absolute;
+            width: 140px;
+            background-color: rgb(228, 228, 228);
+            height: 40px;
+            border-radius: 50px 50px 30px;
+            animation-name: cloud;
+
+            &#cloud-1 {
+                left: 35%;
+                top: 15%;
+                animation: cloud 8s linear infinite;
+                transform: scale(0.9);
+            }
+
+            &#cloud-2 {
+                left: 65%;
+                top: 5%;
+                animation: cloud 10s linear infinite;
+                animation-direction: reverse;
+                transform: scale(0.8);
+            }
+
+            &#cloud-3 {
+                left: 1%;
+                top: 20%;
+                transform: rotateY(180deg);
+                animation: cloud 12s linear infinite;
+            }
+
+            &:after {
+                position: absolute;
+                content: "";
+                display: block;
+                left: 40%;
+                top: -40%;
+                width: 65px;
+                height: 65px;
+                background-color: rgba(228, 228, 228, 0.88);
+                border-radius: 100%;
+            }
+
+            &:before {
+                position: absolute;
+                content: "";
+                display: block;
+                left: 15%;
+                top: -20%;
+                width: 70px;
+                height: 70px;
+                background-color: rgba(228, 228, 228, 0.88);
+                border-radius: 100%;
+            }
+        }
+
+        .birds {
+            position: absolute;
+
+            &#birds-1 {
+                transform: rotateY(180deg);
+                animation: birds 8s linear infinite;
+            }
+
+            &#birds-2 {
+                animation: birds 12s linear infinite reverse;
+            }
+        }
+
+        @keyframes birds {
+            from {
+                margin-left: -800px;
+            }
+            50%{
+                margin-top: 15%;
+            }
+            to {
+                margin-left: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
-
+<img id="birds-1" class="birds" src="image/birds.gif" alt="">
+<img id="birds-2" class="birds" src="image/birds.gif" alt="">
+<div id="cloud-1" class="cloud"></div>
+<div id="cloud-2" class="cloud"></div>
+<div id="cloud-3" class="cloud"></div>
+<img id="walking-man" src="image/man.gif" alt="man">
 </body>
 </html>

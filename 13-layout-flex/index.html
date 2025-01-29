@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flex Layout</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            background-color: lightseagreen;
+        }
+
+        #container {
+            border: 1px solid black;
+            width: 450px;
+            height: 450px;
+            display: flex;
+            /*flex-direction: column-reverse;*/
+            /*flex-wrap: wrap-reverse;*/
+            flex-flow: row-reverse nowrap;
+            justify-content: start;
+            align-content: start;
+            /*column-gap: 10px;*/
+            /*row-gap: 20px;*/
+            gap: 20px 10px;
+
+            & > div {
+                width: 200px;
+                flex: 1 0 100px;
+                /*flex-basis: 100px;*/
+                /*width: 100px;*/
+                height: 100px;
+            }
+
+            #col-1 {
+                background-color: yellow;
+            }
+            #col-2 {
+                background-color: lightblue;
+                align-self: center;
+            }
+            #col-3 {
+                background-color: lightsalmon;
+                align-self: end;
+            }
+            #col-4 {
+                background-color: lightgrey;
+            }
+            #col-5 {
+                background-color: red;
+            }
+            #col-6 {
+                background-color: black;
+                color: white;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Flex Layout</h1>
+    <div id="container">
+        <div id="col-1">Column 1</div>
+        <div id="col-2"></div>
+        <div id="col-3"></div>
+<!--        <div id="col-4"></div>-->
+<!--        <div id="col-5">Column 5</div>-->
+<!--        <div id="col-6">Column 6</div>-->
+    </div>
+</body>
+</html>

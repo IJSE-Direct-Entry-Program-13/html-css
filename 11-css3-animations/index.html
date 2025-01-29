@@ -2,9 +2,42 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 3 Animations</title>
+    <style>
+      h1 {
+        animation-name: my-first-animation;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-delay: 500ms;
+      }
+
+      @keyframes my-first-animation {
+        from {
+          color: red;
+        }
+
+        25% {
+          color: blue;
+          font-size: 3rem;
+        }
+
+        50% {
+          color: red;
+        }
+
+        75%{
+          color: orange;
+          transform: rotate(25deg);
+        }
+
+        100%{
+          color: black;
+        }
+      }
+    </style>
 </head>
 <body>
-
+  <h1>CSS 3 Animations</h1>
 </body>
 </html>

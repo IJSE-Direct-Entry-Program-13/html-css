@@ -2,9 +2,67 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Solar System</title>
+    <style>
+        body {
+            text-align: center;
+            overflow: hidden;
+        }
+
+        #container {
+            position: relative;
+            width: fit-content;
+            margin: 50px auto auto;
+        }
+
+        #earth-path {
+            width: 400px;
+            height: 400px;
+            /*background-color: yellow;*/
+            border-radius: 50%;
+            border: 2px solid black;
+            position: relative;
+            transition: transform 8s cubic-bezier(0, 0, 0.46, 1.44);
+
+            &::after {
+                content: "";
+                display: block;
+                width: 70px;
+                height: 70px;
+                background-image: url('image/earth.webp');
+                background-size: contain;
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform:  translate(50%, -50%);
+            }
+        }
+
+        #field {
+            width: 400px;
+            height: 400px;
+            /*border: 1px solid black;*/
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-image: url('image/sun.gif');
+            background-size: 150px;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        #container:hover #earth-path {
+            transform:  rotate(-360deg);
+        }
+    </style>
 </head>
 <body>
-
+<main>
+    <h1>Solar System</h1>
+    <div id="container">
+        <div id="field"></div>
+        <div id="earth-path"></div>
+    </div>
+</main>
 </body>
 </html>
