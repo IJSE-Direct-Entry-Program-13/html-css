@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <style>
+        h1 {
+            color: black;
+        }
+
+        @media print {
+            h1 {
+                color: red;
+            }
+        }
+
+        @media screen and (prefers-color-scheme: dark) and (width <= 800px) {
+            body {
+                background-color: #393939;
+            }
+
+            h1 {
+                color: #f8f8f8;
+            }
+        }
+    </style>
+</head>
+<body>
+<h1>CSS 3 Media Queries</h1>
+
+<!-- ul#menu>li.menu-item#li-${Menu Item $}*4^p>lorem -->
+<!--(header>img#logo[alt=Logo]+menu>li{Home}+li{Menu $}*2)+main>p>lorem^footer{Copyright}-->
+
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example 2</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        header {
+            padding: 0 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid lightgrey;
+
+            menu {
+                display: flex;
+
+                li {
+                    padding: 10px;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: lightgrey;
+                    }
+                }
+            }
+        }
+
+        main {
+            #slider {
+                background-image: url('image/clark-tibbs-oqStl2L5oxI-unsplash.jpg');
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                width: 100%;
+                padding: 10px;
+                height: 400px;
+            }
+
+            #content-wrapper {
+                display: flex;
+                margin-top: 10px;
+                padding: 0 10px;
+
+                p {
+                    border-right: 2px solid lightgrey;
+                }
+
+                & > * {
+                    flex: 1 0 50%;
+                }
+
+                img {
+                    padding: 20px;
+                    width: 50%;
+                    border-radius: 10%;
+                    align-self: start;
+                }
+            }
+        }
+    </style>
+    <style>
+        @media screen and (width < 800px){
+            header {
+                flex-direction: column;
+                border-bottom: none;
+
+                menu {
+                    width: 100%;
+                    flex-direction: column;
+                    text-align: center;
+
+                    li:not(li:last-child) {
+                        border-bottom: 1px solid lightgrey;
+                    }
+                }
+            }
+
+            main {
+                padding: 10px;
+                #content-wrapper {
+                    p {
+                        border-right: none;
+                        text-align: justify;
+                    }
+                    img {
+                        display: none;
+                    }
+                }
+            }
+        }
+    </style>
+</head>
+<body>
+<!-- (header>img+menu>li*4)+main>div#slider+div#content-wrapper>p+img -->
+<header>
+    <img src="https://ijse.lk/images/logos/ijse@1x.png" alt="IJSE Logo">
+    <menu>
+        <li>Home</li>
+        <li>Courses</li>
+        <li>About Us</li>
+        <li>Contact Us</li>
+    </menu>
+</header>
+<main>
+    <div id="slider"></div>
+    <div id="content-wrapper">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A asperiores consequatur culpa cum ducimus eaque ex fugiat inventore, minima modi molestiae optio possimus quaerat, quas quasi quod soluta vel voluptas.
+            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus architecto at consequatur delectus distinctio, enim, facere incidunt laudantium nam neque non numquam possimus quam repellendus similique tempora totam vel voluptate!</span><span>Cupiditate fugit laudantium ullam vel. Consequatur dolorum magnam maxime natus vero, voluptatibus? A adipisci aut commodi cupiditate fugit ipsam molestias necessitatibus nesciunt omnis pariatur, provident quos repellendus veniam voluptate voluptatem.</span><span>Accusantium alias, asperiores, deserunt dolorum eveniet id magni non quaerat ratione recusandae reiciendis sed voluptates! Accusantium doloremque doloribus eaque esse harum optio placeat quibusdam. Architecto perspiciatis quos rem sed veniam!</span><span>Aut cumque quaerat voluptas. Atque cupiditate doloribus est eveniet, expedita laudantium magni officia quibusdam rem, repellendus sapiente sed similique sunt vitae, voluptate voluptatem voluptatum. At distinctio doloremque eos fuga modi!</span><span>Commodi dicta dolorum eos optio quaerat repudiandae sequi, sunt tempore ullam voluptatibus. Consequuntur corporis debitis dignissimos eligendi excepturi facere in ipsam, labore, maxime natus odio pariatur recusandae rem temporibus, tenetur?</span>
+        </p>
+        <img src="image/clark-tibbs-oqStl2L5oxI-unsplash.jpg" alt="Welcome Image">
+    </div>
+</main>
+</body>
+</html>
