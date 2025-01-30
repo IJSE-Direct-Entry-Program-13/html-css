@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Font Sizes</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-size: 1rem;
+            font-weight: normal;
+            font-style: normal;
+            text-decoration: none;
+            color: black;
+            list-style-type: none;
+        }
+    </style>
+    <style>
+        /* Link the font here */
+    </style>
+    <style>
+        #container-1 {
+            h1 {
+                font-size: 2rem;
+            }
+            h2 {
+                font-size: 1.75rem;
+            }
+            h3 {
+                font-size: 1.5rem;
+            }
+        }
+        #container-2 {
+            h1 {
+                font-size: 32px;
+            }
+            h2 {
+                font-size:  28px;
+            }
+            h3 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div id="container-1">
+    <h1>Font Sizes</h1>
+    <h2>Font Sizes</h2>
+    <h3>Font Sizes</h3>
+</div>
+<hr>
+<div id="container-2">
+    <h1>Font Sizes</h1>
+    <h2>Font Sizes</h2>
+    <h3>Font Sizes</h3>
+</div>
+<hr>
+<style>
+    #container-3 {
+        h1:first-child {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+        }
+        h1:last-child {
+            font-size: clamp(1.5rem, 2vw, 2rem);
+        }
+    }
+    /*#container-3 {*/
+    /*    --f1: 4rem;*/
+    /*    --f2: 2rem;*/
+    /*    h1:first-child {*/
+    /*        font-size: var(--f1);*/
+    /*    }*/
+    /*    h1:last-child {*/
+    /*        font-size: var(--f2);*/
+    /*    }*/
+    /*}*/
+    /*@media (width <= 992px){*/
+    /*    #container-3 {*/
+    /*        --f1: 1.75rem;*/
+    /*        --f2: 1.5rem;*/
+    /*    }*/
+    /*}*/
+    /*@media (width <= 768px){*/
+    /*    #container-3 {*/
+    /*        --f1: 1.2rem;*/
+    /*        --f2: 0.8rem;*/
+    /*    }*/
+    /*}*/
+</style>
+<div id="container-3">
+    <h1>Responsive Fonts (based on viewport width)</h1>
+    <h1>Responsive Fonts (based on viewport height)</h1>
+</div>
+</body>
+</html>

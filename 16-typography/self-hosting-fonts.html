@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Self Hosting Fonts</title>
+    <style>
+        @font-face {
+            font-family: "Direct Entry Program";
+            src:    url('font/Eater-Regular.woff2') format('woff2'),
+                    url('font/Eater-Regular.woff') format('woff'),
+                    url('font/Eater-Regular.ttf') format('truetype'),
+                    url('font/Eater-Regular.eot') format('embedded-opentype');
+        }
+
+        @font-face {
+            font-family: Roboto;
+            src: url('font/Roboto-VariableFont_wdth,wght.ttf');
+        }
+
+
+        #f1 {
+            font-family: "Direct Entry Program", Arial, sans-serif;
+        }
+
+        #f2 {
+            font-family: Roboto, sans-serif;
+        }
+
+        #f3 {
+            font-family: Roboto, sans-serif;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+<h1>Self Hosting Fonts</h1>
+Go <a href="index.html">back</a>
+<hr>
+<h1 id="f1">Let's see how this goes</h1>
+<h1 id="f2">Let's see how this goes</h1>
+<h1 id="f3">Let's see how this goes</h1>
+</body>
+</html>
