@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Layout Grid 2</title>
+    <style>
+        header {
+            grid-area: header;
+            background-color: yellow;
+        }
+        nav {
+            grid-area: nav;
+            background-color: lightblue;
+        }
+        #slider {
+            grid-area: slider;
+            background-color: lightsalmon;
+        }
+        p:first-of-type{
+            grid-area: para1;
+            background-color: lightgreen;
+        }
+        p:last-of-type{
+            grid-area: para2;
+            background-color: lightskyblue;
+        }
+        footer {
+            grid-area: footer;
+            background-color: lavender;
+        }
+
+        #container {
+            display: grid;
+            grid-template-areas:
+                "header header header"
+                "nav slider slider"
+                "nav para1 para2"
+                "nav footer footer";
+        }
+    </style>
+</head>
+<body>
+<h1>Layout Grid 2</h1>
+<!--header+nav+div#slider+p*2+footer-->
+<div id="container">
+    <header>Header</header>
+    <nav>Navigation</nav>
+    <div id="slider">Slider</div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni nemo rerum sit ut voluptates. Aliquid blanditiis cum ducimus illo, laborum molestias nobis odio pariatur perspiciatis rem saepe, soluta veritatis voluptates!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquid assumenda blanditiis dicta distinctio eveniet inventore minima molestiae natus nemo odit officiis quis quos, repellat saepe similique sint voluptas voluptates!</p>
+    <footer>Footer</footer>
+</div>
+</body>
+</html>

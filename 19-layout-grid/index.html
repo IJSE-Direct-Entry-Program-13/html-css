@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Layout: Grid</title>
+    <style>
+      *{
+        box-sizing: border-box;
+      }
+      #grid-1 {
+        /*background-color: yellow;*/
+        border: 1px solid black;
+        width: 450px;
+        height: 450px;
+        display: grid;
+        grid-template-columns: 100px 200px 100px;
+        grid-template-rows: 100px 100px 100px;
+        justify-content: space-evenly;
+        justify-items: center;
+        align-items: end;
+        align-content: space-between;
+        gap: 2px;
+
+        & > * {
+          width: 100%;
+          height: 100%;
+        }
+
+        #data-1, #data-4, #data-7 {
+          background-color: orange;
+        }
+        #data-2, #data-5, #data-8 {
+          background-color: lightgreen;
+        }
+        #data-3, #data-6, #cell-9 {
+          background-color: lightblue;
+        }
+
+        #data-1, #data-5, #data-7 {
+          width: 80px;
+          height: 50px;
+          align-self: start;
+          justify-self: end;
+        }
+      }
+    </style>
+</head>
+<body>
+<h1>Layout Grid</h1>
+<div id="grid-1">
+  <div id="data-1">Data 1</div>
+  <div id="data-2">Data 2</div>
+  <div id="data-3">Data 3</div>
+  <div id="data-4">Data 4</div>
+  <div id="data-5">Data 5</div>
+  <span id="data-6">Data 6</span>
+  <div id="data-7">Data 7</div>
+  <div id="data-8">Data 8</div>
+</div>
+</body>
+</html>
