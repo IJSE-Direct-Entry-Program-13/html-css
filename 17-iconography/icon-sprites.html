@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Icon Sprites</title>
+    <style>
+        #container-1 {
+            display: flex;
+            gap: 2px;
+            justify-content: center;
+
+            button {
+                font-size: 1rem;
+                padding: 10px;
+                flex: 1 1 200px;
+
+                img {
+                    width: 32px;
+                    vertical-align: middle;
+                    padding-right: 5px;
+                }
+            }
+        }
+
+        #container-2 {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 2px;
+            --icon-sprite: url('./img/google-icon-sprite.png');
+
+            button {
+                font-size: 1rem;
+                height: 64px;
+                flex: 1 1 200px;
+                position: relative;
+                padding: 10px 10px 10px 32px;
+
+                &::before {
+                    position: absolute;
+                    content: "";
+                    display: inline-block;
+                    width: 106px;
+                    height: 106px;
+                    left: -20px;
+                    top: -25px;
+                    background-image: var(--icon-sprite);
+                    background-repeat: no-repeat;
+                    transform: scale(0.5);
+                }
+
+                &:first-child::before {
+                    background-position: 0 0;
+                }
+
+                &:nth-child(2)::before {
+                    background-position: 0 -115px;
+                }
+
+                &:last-child::before {
+                    background-position: 0 calc(-115px * 3);
+                }
+            }
+        }
+
+        #container-3 {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+            gap: 2px;
+            --icon-sprite: url('./img/google-icon-sprite.png');
+            button {
+                flex: 1 1 200px;
+                font-size: 1rem;
+                padding: 10px;
+                span {
+                    display: inline-block;
+                    background-image: var(--icon-sprite);
+                    background-size: cover;
+                    width: 48px;
+                    height: 48px;
+                    vertical-align: middle;
+                    margin-right: 10px;}
+                &:first-child span {
+                    background-position: 0 0;
+                }
+                &:nth-child(2) span {
+                    background-position: 0 calc(-52px);
+                }
+                &:last-child span{
+                    background-position: 0 calc(-52px * 3);
+                }
+            }
+        }
+    </style>
+</head>
+<body>
+<h1>Icon Sprites</h1>
+<div id="container-1">
+    <button>
+        <img src="./img/instagram.png" alt="instagram">
+        First
+    </button>
+    <button>
+        <img src="./img/telegram.png" alt="telegram">
+        Second
+    </button>
+    <button>
+        <img src="./img/whatsapp.png" alt="whatsapp">
+        Third
+    </button>
+</div>
+<div id="container-2">
+    <button>Button 1</button>
+    <button>Button 2</button>
+    <button>Button 3</button>
+</div>
+<div id="container-3">
+    <button><span></span>Button 1</button>
+    <button><span></span>Button 2</button>
+    <button><span></span>Button 3</button>
+</div>
+</body>
+</html>
