@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Forms</title>
+</head>
+<body>
+<!--<label for="txt-id">I am a label</label>-->
+<h1>HTML Forms</h1>
+<div id="frm-1">
+    <div>
+        <label for="txt-id">Customer ID:</label>
+        <input id="txt-id" type="text" value="C001">
+    </div>
+    <label>
+        Customer Name:
+        <input type="text">
+    </label>
+    <div>
+        <button>Do Something</button>
+        <button type="reset">Clear</button>
+    </div>
+</div>
+<script>
+    const btn = document.querySelector("#frm-1 button");
+    btn.addEventListener('click', (e)=>{
+       // e.preventDefault();
+       const h1Elm = document.querySelector("h1");
+       h1Elm.style.color = 'red';
+       h1Elm.style.backgroundColor = 'yellow';
+    });
+</script>
+</body>
+</html>

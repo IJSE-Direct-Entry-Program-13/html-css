@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Action vs Enctype</title>
+</head>
+<body>
+<h1>Action vs Enctype</h1>
+<form method="POST" action="http://localhost:7070/customers"
+      enctype="multipart/form-data">
+    <!--  (p>label[for="txt-$"]+input[type="text"]#txt-$)*4-->
+    <p>
+        <label for="txt-1">Customer ID</label>
+        <input name="id" type="text" id="txt-1">
+    </p>
+    <p>
+        <label for="txt-2">Customer Name</label>
+        <input name="name" type="text" id="txt-2">
+    </p>
+    <p>
+        <label for="txt-3">Customer Address</label>
+        <input name="address" type="text" id="txt-3">
+    </p>
+    <p>
+        <label for="fl-picture-1">Customer Picture 1</label>
+        <input name="picture-1" type="file" id="fl-picture-1">
+    </p>
+    <p>
+        <label for="fl-picture-2">Customer Picture 2</label>
+        <input name="picture-2" type="file" id="fl-picture-2">
+    </p>
+    <p>
+        <label>Gender</label>
+        <label><input type="radio" name="gender" value="male"> Male</label>
+        <label><input type="radio" name="gender" value="female"> Female</label>
+    </p>
+    <p>
+        <button>Save</button>
+        <button type="reset">Clear</button>
+    </p>
+</form>
+</body>
+</html>

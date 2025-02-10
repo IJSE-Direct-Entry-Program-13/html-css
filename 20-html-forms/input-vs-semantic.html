@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Input vs Semantic</title>
+</head>
+<body>
+<h1>Input vs Semantic</h1>
+<form action="">
+    <div>
+        <label for="txt-name">Name</label>
+        <input type="text" id="txt-name" value="Default">
+    </div>
+    <div>
+        <button>Submit</button>
+        <button type="reset">Reset</button>
+        <button type="button">Button</button>
+    </div>
+    <div>
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+        <input type="button" value="Button">
+    </div>
+</form>
+<script>
+    const frm = document.querySelector("form");
+    frm.addEventListener('submit', ()=>{
+        const h1Elm = document.querySelector("h1");
+        h1Elm.style.color = 'red';
+        h1Elm.style.backgroundColor = 'yellow';
+    });
+</script>
+</body>
+</html>
