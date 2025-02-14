@@ -1,0 +1,8 @@
+{
+  "name": "21-design-systems-impl",
+  "version": "1.0.0",
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "materialize-css": "^1.0.0-rc.2"
+  }
+}
